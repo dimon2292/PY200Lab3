@@ -11,7 +11,7 @@ class Book:
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
 
 
-class PaperBook:
+class PaperBook(Book):
     def __init__(self, name: str, author: str, pages: int):
         self.name = name
         self.author = author
@@ -21,7 +21,7 @@ class PaperBook:
         return f"Книга {self.name}. Автор {self.author}"
 
 
-class AudioBook:
+class AudioBook(Book):
     def __init__(self, name: str, author: str, duration: float):
         self.name = name
         self.author = author
@@ -29,3 +29,6 @@ class AudioBook:
 
     def __str__(self):
         return f"Книга {self.name}. Автор {self.author}"
+
+
+
